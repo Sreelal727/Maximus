@@ -271,11 +271,13 @@
 
   <section>
     <div class="sec-head"><span class="sec-rule"></span><div class="sec-txt">
-      <h2>Inside the big cost lines — FY 2025-26</h2>
-      <div class="sec-sub">Note-wise breakup from the P&amp;L schedules. Pick a cost head to see what's driving it.</div>
+      <h2>Inside the big cost lines</h2>
+      <div class="sec-sub">Note-wise breakup from each period's P&amp;L schedules. Pick a period and a cost head.</div>
     </div></div>
     <div class="filter-row">
-      <span class="f-label">Cost head</span>
+      <span class="f-label">Period</span>
+      <div class="seg" id="segNotePeriod" role="group" aria-label="Schedule period"></div>
+      <span class="f-label" style="margin-left:8px;">Cost head</span>
       <div class="seg" id="segNote" role="group" aria-label="Cost head"></div>
     </div>
     <div class="card">
@@ -288,31 +290,38 @@
 
   <section>
     <div class="sec-head"><span class="sec-rule"></span><div class="sec-txt">
-      <h2>Balance sheet &amp; financial position — as on 31 Mar 2026</h2>
-      <div class="sec-sub">From the FY 2025-26 workbook. Share the April/May balance-sheet pages to track monthly movement.</div>
+      <h2>Balance sheet &amp; financial position — Mar → May 2026</h2>
+      <div class="sec-sub">Month-end balance sheets from all three workbooks. This is where the profit is going.</div>
     </div></div>
     <div class="kpis" id="bs-kpis" style="margin-bottom:16px;"></div>
+    <div class="card" style="margin-bottom:16px;">
+      <h3>Month-end movement — key balance sheet items</h3>
+      <p class="desc">₹ lakh at each month-end. Receivables are absorbing the cash that profits generate.</p>
+      <div class="legend" id="lg-bsm"></div>
+      <div id="ch-bsm"></div>
+      <p class="note">Receivables +₹44.9 L and fixed assets +₹12.3 L over two months, funded by a ₹19.5 L new loan, ₹12.6 L released from inventory and recovered supplier advances — cash itself barely moved.</p>
+    </div>
     <div class="grid2">
       <div class="card">
-        <h3>Where the money sits — assets</h3>
-        <p class="desc">₹2.31 Cr total. Over a third is locked in inventory; cash is under 1%.</p>
+        <h3>Where the money sits — assets, 31 May 2026</h3>
+        <p class="desc">₹2.57 Cr total. Receivables are now the largest asset — bigger than inventory.</p>
         <div class="donut-flex">
           <div id="ch-assets"></div>
           <div class="donut-legend" id="assets-legend"></div>
         </div>
       </div>
       <div class="card">
-        <h3>Where the money came from — funding</h3>
-        <p class="desc">Directors' loans carry the company; accumulated losses sit as negative reserves.</p>
+        <h3>Where the money came from — funding, 31 May 2026</h3>
+        <p class="desc">Directors' loans still carry the company; a new ₹19.5 L loan arrived in May.</p>
         <div id="ch-funding"></div>
-        <p class="note">Vehicle loans (₹47.6 L) exceed the book value of vehicles (₹36.2 L). The ₹28.4 L bank OD is the working-capital line. Reserves are negative after two loss years.</p>
+        <p class="note">The OD was paid down (₹28.4 L → ₹20.7 L) while the ₹19.5 L Dwideep loan came in. Vehicle loans ₹46.1 L against vehicles at ₹42.2 L book value. Reserves remain negative.</p>
       </div>
     </div>
     <div class="card" style="margin-top:16px;">
-      <h3>Top trade receivables</h3>
-      <p class="desc">Gross ledger balances from the debtor schedule. Net receivables ₹32.15 L after credit balances.</p>
+      <h3>Top trade receivables — 30 Apr 2026</h3>
+      <p class="desc">Latest debtor schedule shared (April workbook). Net receivables were ₹57.9 L on 30 Apr and reached ₹77.0 L by 31 May.</p>
       <div id="ch-debtors"></div>
-      <p class="note">The Lulu Hypermarket group alone owes ₹12.0 L (37% of net receivables) and the Siliconvalley outlet ledger adds ₹9.2 L (29%) — two counterparties hold two-thirds of the book.</p>
+      <p class="note">The Siliconvalley outlet ledger is ₹23.2 L — 40% of the book and up from ₹9.2 L at year-end. The Lulu group adds ₹17.3 L gross (₹16.3 L net of the Maradu credit). Share the May debtor page to refresh this view.</p>
     </div>
   </section>
 
@@ -330,9 +339,9 @@
       </div>
       <div class="card insight">
         <span class="chip warn">Review</span>
-        <h4>Marketing grew 11× faster than revenue</h4>
-        <p>Marketing spend rose 68% MoM (₹3.20 L → ₹5.38 L) while revenue rose 6.2%. In FY 2025-26, marketing at 6.8% of revenue was a major driver of the loss.</p>
-        <p class="act"><b>Action:</b> attach campaign-level ROI before committing June's budget; hold marketing near 3–4% of revenue until gross margin recovers.</p>
+        <h4>May's "marketing spike" is mostly discounts, not ads</h4>
+        <p>Of May's ₹5.38 L marketing, ₹2.30 L is "Discount allowed" — price concessions booked as marketing (April: ₹0.99 L). Listing fees were flat at ₹1.5 L both months. Together with the COGS ratio jump, May's real problem is pricing and discounting, not ad spend.</p>
+        <p class="act"><b>Action:</b> track discounts as a revenue deduction, set a per-channel discount policy, and review May's big discount recipients.</p>
       </div>
       <div class="card insight">
         <span class="chip warn">Watch</span>
@@ -359,27 +368,33 @@
       </div>
       <div class="card insight">
         <span class="chip bad">Act now</span>
-        <h4>Cash is down to about one day of costs</h4>
-        <p>Cash &amp; bank of ₹1.89 L against ≈₹1.5 L/day of operating spend. Meanwhile ₹80.8 L sits in stock, ₹21.6 L in GST/tax receivables and ₹28.3 L in advances to suppliers (₹17.8 L with Falcon Agrifriz alone).</p>
-        <p class="act"><b>Action:</b> set a minimum cash floor, run down stock, pursue GST set-offs, and recover or adjust the supplier advances.</p>
-      </div>
-      <div class="card insight">
-        <span class="chip warn">Review</span>
-        <h4>The cash conversion cycle is ~94 days</h4>
-        <p>Inventory sits 74 days and debtors take 22 days, while suppliers are paid in about a day. Working capital of ₹1.57 Cr is funding the whole chain.</p>
-        <p class="act"><b>Action:</b> negotiate supplier credit — even 15 days of credit on purchases frees ~₹18 L of cash permanently.</p>
+        <h4>Profits are turning into receivables, not cash</h4>
+        <p>PAT was +₹10.1 L over April–May, but debtors grew ₹44.9 L (₹32.2 L → ₹77.0 L). The gap was funded by a new ₹19.5 L loan, ₹12.6 L released from inventory and recovered supplier advances — cash only moved ₹1.9 L → ₹4.2 L (~3 days of costs).</p>
+        <p class="act"><b>Action:</b> run a collections drive now; set a receivables ceiling in days of sales (e.g. 15 days) before extending more credit.</p>
       </div>
       <div class="card insight">
         <span class="chip warn">Watch</span>
-        <h4>Receivables ride on two names</h4>
-        <p>The Lulu Hypermarket group (₹12.0 L) and the Siliconvalley outlet ledger (₹9.2 L) together are two-thirds of net receivables. A payment delay by either strains the ₹1.89 L cash position immediately.</p>
-        <p class="act"><b>Action:</b> set credit limits and a weekly collection cadence for these two accounts.</p>
+        <h4>One ledger is 40% of all receivables</h4>
+        <p>The Siliconvalley outlet ledger hit ₹23.2 L by 30 Apr — up from ₹9.2 L at year-end. The Lulu group adds ₹16.3 L net. Two counterparties again hold about two-thirds of a much bigger book.</p>
+        <p class="act"><b>Action:</b> if the outlet is group-owned, settle inter-unit balances monthly; set credit limits and weekly collection cadence for Lulu.</p>
+      </div>
+      <div class="card insight">
+        <span class="chip good">Improved</span>
+        <h4>Working capital efficiency is sharply better</h4>
+        <p>Inventory fell from 74 days at year-end to ~26 days in May (₹80.8 L → ₹68.2 L while sales doubled). Supplier advances were recovered (₹28.3 L → ₹8.4 L, Falcon ₹17.8 L → ₹2.5 L). The cash conversion cycle is down from ~94 to ~45 days.</p>
+        <p class="act"><b>Action:</b> the remaining lever is supplier credit — payables still clear in ~2 days; even 15 days of credit frees ~₹40 L at May's purchase rate.</p>
       </div>
       <div class="card insight">
         <span class="chip warn">Note</span>
-        <h4>The company runs on director money</h4>
-        <p>₹1.58 Cr of directors' loans against just ₹1 L of share capital, with reserves at −₹11.2 L after the loss years. Bank debt is ₹76 L, of which vehicle loans (₹47.6 L) exceed the vehicles' book value (₹36.2 L).</p>
-        <p class="act"><b>Action:</b> FY 26-27 profits have started repairing net worth — consider converting part of the director loans to equity to support future bank credit.</p>
+        <h4>The company runs on director money — and debt is rising</h4>
+        <p>₹1.58 Cr of directors' loans against ₹1 L share capital; reserves still negative (−₹4.3 L). Borrowings rose to ₹86.4 L in May with the new ₹19.5 L Dwideep loan, even as the OD was paid down to ₹20.7 L. Fixed assets grew ₹12.3 L in two months (mainly vehicles).</p>
+        <p class="act"><b>Action:</b> match new debt to cash-generating assets, and consider converting part of the director loans to equity to strengthen net worth.</p>
+      </div>
+      <div class="card insight">
+        <span class="chip warn">Note</span>
+        <h4>The monthly books don't fully tie</h4>
+        <p>Each month's opening reserves differ from the prior closing (by ₹0.9 L in April, ₹2.3 L in May), and April's opening stock (₹81.3 L) differs from the year-end inventory (₹80.8 L). Small, but it means monthly PAT isn't fully reconciled.</p>
+        <p class="act"><b>Action:</b> ask the accountant to reconcile opening balances before relying on monthly profit figures.</p>
       </div>
     </div>
   </section>
@@ -400,7 +415,7 @@
   </section>
 
   <footer>
-    Source: consolidated P&amp;L CSV exports — “PROFIT AND LOSS ACCOUNT FOR THE PERIOD 2025-26 / APRIL 2026 / MAY 2026”. Balance-sheet, note-schedule and debtor/creditor figures transcribed from the FY 2025-26 workbook pages (BS, BS SCHEDULE, PNL SCHEDULE and OTHER SCHEDULE tabs). FY 2025-26 total expenses shown exclude depreciation (listed separately, ₹5,68,965). Q1 FY27 YTD = April + May 2026. Currency: Indian Rupees; L = lakh (10⁵), Cr = crore (10⁷).
+    Source: consolidated P&amp;L CSV exports — “PROFIT AND LOSS ACCOUNT FOR THE PERIOD 2025-26 / APRIL 2026 / MAY 2026”. Balance-sheet, note-schedule and debtor/creditor figures transcribed from all three workbooks' pages (BS, BS SCHEDULE, PNL SCHEDULE and OTHER SCHEDULE tabs); debtor detail is as on 30 Apr 2026 (May debtor page not shared). FY 2025-26 total expenses shown exclude depreciation (listed separately, ₹5,68,965). Q1 FY27 YTD = April + May 2026. Currency: Indian Rupees; L = lakh (10⁵), Cr = crore (10⁷). Monthly opening balances contain small unreconciled differences vs prior closings — see insights.
   </footer>
 </div>
 
@@ -422,70 +437,123 @@ const MAY = {rev:10820170.57, oi:-0.14, ti:10820170.43, cogs:8281199.29, emp:914
              te:10601988.03, dep:null, pat:218182.40};
 const Q1  = {}; for (const k of Object.keys(APR)) Q1[k] = (APR[k]==null||MAY[k]==null) ? null : +(APR[k]+MAY[k]).toFixed(2);
 
-/* Balance sheet as on 31 Mar 2026 (FY 25-26 workbook: BS + BS SCHEDULE + OTHER SCHEDULE tabs) */
+/* Month-end balance sheets (BS + BS SCHEDULE tabs of all three workbooks) */
+const BSM = {
+  labels: ['31 Mar', '30 Apr', '31 May'],
+  ownersFund:  [15888268.00, 15888268.00, 15888268.00],
+  reserves:    [-1119755.84, -418852.09,  -426994.98],
+  borrowings:  [7597552.58,  7459503.07,  8635773.37],
+  tradePay:    [167052.08,   686370.88,   682347.58],
+  otherPay:    [603225.00,   725459.00,   900038.00],
+  fixed:       [5928482.84,  6120262.27,  7162248.11],
+  deposits:    [724106.33,   667439.67,   677335.01],
+  inventory:   [8083090.13,  6092634.29,  6818528.00],
+  receivables: [3215224.38,  5789927.38,  7701492.99],
+  cash:        [188702.55,   464457.36,   416703.46],
+  otherCA:     [4996735.59,  5206027.89,  2903124.40],
+  total:       [23136341.82, 24340748.86, 25679431.97]
+};
+/* 31 May 2026 snapshot for composition charts */
 const BS = {
-  total: 23136341.82,
+  total: 25679431.97,
   fund: [
     {name:"Directors' loans",     v:15788268.00},
-    {name:'Vehicle loans (bank)', v:4756135.42},
-    {name:'Bank OD (IOB)',        v:2841417.16},
-    {name:'Other payables',       v:603225.00},
-    {name:'Trade payables',       v:167052.08},
+    {name:'Vehicle loans (bank)', v:4610859.70},
+    {name:'Bank OD (IOB)',        v:2074913.67},
+    {name:'Loan — Dwideep',       v:1950000.00},
+    {name:'Other payables',       v:900038.00},
+    {name:'Trade payables',       v:682347.58},
     {name:'Share capital',        v:100000.00},
-    {name:'Reserves & surplus',   v:-1119755.84}
+    {name:'Reserves & surplus',   v:-426994.98}
   ],
   assets: [
-    {name:'Inventories',          v:8083090.13, color:'--s1'},
-    {name:'Fixed assets',         v:5928482.84, color:'--s2'},
-    {name:'Other current assets', v:4996735.59, color:'--s3'},
-    {name:'Trade receivables',    v:3215224.38, color:'--s4'},
-    {name:'Deposits',             v:724106.33,  color:'--s5'},
-    {name:'Cash & bank',          v:188702.55,  color:'--s6'}
+    {name:'Inventories',          v:6818528.00, color:'--s1'},
+    {name:'Fixed assets',         v:7162248.11, color:'--s2'},
+    {name:'Other current assets', v:2903124.40, color:'--s3'},
+    {name:'Trade receivables',    v:7701492.99, color:'--s4'},
+    {name:'Deposits',             v:677335.01,  color:'--s5'},
+    {name:'Cash & bank',          v:416703.46,  color:'--s6'}
   ],
-  netReceivables: 3215224.38,
+  /* debtor detail is from the April OTHER SCHEDULE (latest shared) */
+  netReceivables: 5789927.38,
   debtors: [
-    {name:'Siliconvalley outlet',  v:922739.90},
-    {name:'Lulu Hypermarket TVM',  v:696144.06},
-    {name:'Lulu Edappally',        v:240688.48},
-    {name:'Berka Enterprises',     v:141164.72},
-    {name:'Lulu Kottayam',         v:132701.04},
-    {name:'Lulu Calicut',          v:131866.33},
-    {name:'C Sales, Thrissur',     v:94681.70},
-    {name:'Cool Land, Kuttiady',   v:94208.00}
+    {name:'Siliconvalley outlet',  v:2320134.50},
+    {name:'Lulu Hypermarket TVM',  v:788145.11},
+    {name:'Lulu Edappally',        v:484545.01},
+    {name:'Lulu Kottayam',         v:303830.49},
+    {name:'C Sales, Thrissur',     v:179094.70},
+    {name:'Rayees Coolbar',        v:174203.06},
+    {name:'Lulu Calicut',          v:155104.01},
+    {name:'Cool Land, Kuttiady',   v:110541.00}
   ]
 };
 
-/* P&L note schedules, FY 2025-26 (PNL SCHEDULE tab) */
-const NOTE_HEADS = {
-  mkt: {label:'Marketing', title:'Note 18 — Marketing expenses · ₹36.64 L',
-    desc:'6.8% of FY revenue — the single biggest discretionary spend.',
-    foot:'Advertisement, listing fees and brand consultancy alone are ₹24.4 L. These are the lines to hold near 3–4% of revenue.',
-    items:[['Advertisement',1034646],['Listing fee',886000],['Brand consultancy fee',518889],['Stall & expo',460004],
-           ['Designing charge',269000],['Marketing expenses',210320],['POP printing',190102],['Others (7 items)',95004.45]]},
-  oth: {label:'Other expenses', title:'Note 21 — Other expenses · ₹22.96 L',
-    desc:'Mostly fixed establishment costs.',
-    foot:'Rent (₹8.8 L) and electricity (₹5.6 L) are 63% of this head — review tariffs and space utilisation.',
-    items:[['Rent & rates',880000],['Electricity charges',558071.39],['Discount & promoclaim',319780.50],
-           ['AI & software renewal',127408.43],['Celebration expenses',106891.20],['Staff uniform',93254.21],
-           ['Printing & stationery',70097.28],['Others (9 items)',140549.81]]},
-  cogs:{label:'COGS', title:'Note 14 — Cost of goods sold · ₹4.00 Cr',
-    desc:'Input build-up before deducting closing stock.',
-    foot:'Gross inputs of ₹4.81 Cr less closing stock ₹80.83 L = ₹4.00 Cr net COGS. Freight and packing add ~11% on top of purchases.',
-    items:[['Purchases',43309141.09],['Packing materials',2753316.57],['Freight & coolie',2048645.10]]},
-  emp: {label:'Employee', title:'Note 15 — Employee benefit expenses · ₹54.47 L',
-    desc:'10.1% of FY revenue.',
-    foot:'Staff travelling of ₹11.0 L is 20% of the employee bill — worth a policy look.',
-    items:[['Salary',4089893],['Travelling — staff',1104967],['Wages',168946],['Incentive',62865],
-           ['Medical expenses',15000],['ESI',5729]]},
-  trn: {label:'Transport', title:'Note 20 — Transportation expenses · ₹10.13 L',
-    desc:'Fuel and hired vehicles dominate.',
-    foot:'Petrol plus vehicle rents make up ₹8.7 L of the ₹10.1 L head.',
-    items:[['Petrol',490597],['Vehicle rent — Vajram',301950],['Vehicle rent',80000],['Vehicle maintenance',50383.01],
-           ['Meal expenses',30324],['Vehicle insurance',25172],['Others (5 items)',34205]]},
-  fin: {label:'Finance', title:'Note 16 — Finance cost · ₹1.58 L',
-    desc:'Loan charges and interest.',
-    foot:'Loan processing and vehicle-loan interest are the lines that grow as borrowings rise.',
-    items:[['Loan processing charge',57171],['Interest — vehicle loan',52548],['Bank interest',34215],['Bank charges',14020.03]]}
+/* P&L note schedules, per period (PNL SCHEDULE tabs) */
+const NOTE_META = {
+  mkt: {label:'Marketing',      note:18, name:'Marketing expenses'},
+  oth: {label:'Other expenses', note:21, name:'Other expenses'},
+  cogs:{label:'COGS',           note:14, name:'Cost of goods sold'},
+  emp: {label:'Employee',       note:15, name:'Employee benefit expenses'},
+  trn: {label:'Transport',      note:20, name:'Transportation expenses'},
+  fin: {label:'Finance',        note:16, name:'Finance cost'}
+};
+const NOTE_PERIODS = {fy:'FY 2025-26', apr:'April 2026', may:'May 2026'};
+const NOTE_DATA = {
+  fy: {
+    mkt: {foot:'Advertisement, listing fees and brand consultancy alone are ₹24.4 L. These are the lines to hold near 3–4% of revenue.',
+      items:[['Advertisement',1034646],['Listing fee',886000],['Brand consultancy fee',518889],['Stall & expo',460004],
+             ['Designing charge',269000],['Marketing expenses',210320],['POP printing',190102],['Others (7 items)',95004.45]]},
+    oth: {foot:'Rent (₹8.8 L) and electricity (₹5.6 L) are 63% of this head — review tariffs and space utilisation.',
+      items:[['Rent & rates',880000],['Electricity charges',558071.39],['Discount & promoclaim',319780.50],
+             ['AI & software renewal',127408.43],['Celebration expenses',106891.20],['Staff uniform',93254.21],
+             ['Printing & stationery',70097.28],['Others (9 items)',140549.81]]},
+    cogs:{total:40028012.63, foot:'Opening stock ₹0 + inputs ₹4.81 Cr − closing stock ₹80.83 L = ₹4.00 Cr net COGS. Freight and packing add ~11% on top of purchases.',
+      items:[['Purchases',43309141.09],['Packing materials',2753316.57],['Freight & coolie',2048645.10]]},
+    emp: {foot:'Staff travelling of ₹11.0 L is 20% of the employee bill — worth a policy look.',
+      items:[['Salary',4089893],['Travelling — staff',1104967],['Wages',168946],['Incentive',62865],
+             ['Medical expenses',15000],['ESI',5729]]},
+    trn: {foot:'Petrol plus vehicle rents make up ₹8.7 L of the ₹10.1 L head.',
+      items:[['Petrol',490597],['Vehicle rent — Vajram',301950],['Vehicle rent',80000],['Vehicle maintenance',50383.01],
+             ['Meal expenses',30324],['Vehicle insurance',25172],['Others (5 items)',34205]]},
+    fin: {foot:'Loan processing and vehicle-loan interest are the lines that grow as borrowings rise.',
+      items:[['Loan processing charge',57171],['Interest — vehicle loan',52548],['Bank interest',34215],['Bank charges',14020.03]]}
+  },
+  apr: {
+    mkt: {foot:'Listing fee ₹1.5 L is the biggest line; "discount allowed" ₹0.99 L is a price concession booked as marketing.',
+      items:[['Listing fee',150000],['Discount allowed',98920.58],['Marketing — Favour Fransis',50000],
+             ['Consultancy — Nubox',13999],['Food quality checking',4350],['POP printing',2800]]},
+    oth: {foot:'Rent of ₹2.59 L/month is running ~3.5× the FY 2025-26 average (₹0.73 L/month) — confirm the new premises terms.',
+      items:[['Rent & rates',259000],['Electricity charges',47854],['Vehicle maintenance',36087.07],
+             ['Vehicle insurance',28452],['Registration & renewal',17048],['Printing & stationery',8394.18],
+             ['Telephone',7680],['Others (3 items)',6920.50]]},
+    cogs:{total:7332201.30, foot:'Opening stock ₹81.33 L + inputs ₹52.92 L − closing stock ₹60.93 L = ₹73.32 L COGS (72.0% of revenue).',
+      items:[['Purchases',4990450.80],['Packing materials',194336.85],['Freight & coolie',106796]]},
+    emp: {foot:'Salary and staff travel dominate; headcount cost is tracking revenue.',
+      items:[['Salary',616872],['Travelling — staff',181562],['Wages',51615],['ESI',2003],['Incentive',2000]]},
+    trn: {foot:'Petrol is 83% of the head now that vehicle rents have stopped.',
+      items:[['Petrol',155164],['Vehicle registration',13160],['Meal expenses',9980],['Unloading',7100],
+             ['Transportation — Lulu',1737.50],['Loading',210]]},
+    fin: {foot:'Vehicle-loan interest is now the biggest finance line.',
+      items:[['Interest — vehicle loan',44233],['Bank interest',17096],['Bank charges',1022]]}
+  },
+  may: {
+    mkt: {foot:'"Discount allowed" ₹2.30 L is 43% of the head — price concessions, not ad spend. This is the real May marketing story.',
+      items:[['Discount allowed',229678.66],['Listing fee',150000],['Sponsorship',50000],['Marketing — DV Deepak',50000],
+             ['POP printing',33432],['Consultancy — Nubox',20498],['LinkedIn',4071]]},
+    oth: {foot:'Rent ₹2.82 L and electricity ₹0.54 L are 89% of the head.',
+      items:[['Rent & rates',282460],['Electricity charges',54429],['Printing & stationery',30068.48],
+             ['Telephone',8392],['Others (4 items)',5197.50]]},
+    cogs:{total:8281199.29, foot:'Opening stock ₹60.93 L + inputs ₹90.07 L − closing stock ₹68.19 L = ₹82.81 L COGS (76.5% of revenue — the margin leak).',
+      items:[['Purchases',8726470],['Freight & coolie',262970],['Packing materials',17653]]},
+    emp: {foot:'A ₹1.08 L staff tour is the new line vs April; salary is flat.',
+      items:[['Salary',611686],['Travelling — staff',182386],['Staff tour',107831],['Incentive',10000],
+             ['ESI',1458],['Medical expenses',961]]},
+    trn: {foot:'Petrol again dominates; unloading charges jumped with volume.',
+      items:[['Petrol',150314],['Unloading',20500],['Fastag',11321],['Meal expenses',10680],
+             ['National pass',5966],['Transportation — Lulu',2733.50],['Loading',700]]},
+    fin: {foot:'Vehicle-loan interest is three-quarters of the head.',
+      items:[['Interest — vehicle loan',38562],['Bank interest',13131],['Bank charges',501.60]]}
+  }
 };
 
 const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -833,20 +901,33 @@ function renderComposition(){
   });
 })();
 
-/* ---------- note drill-down ---------- */
-let noteKey = 'mkt';
+/* ---------- note drill-down (period × cost head) ---------- */
+let noteKey = 'mkt', notePeriod = 'may';
 function renderNote(){
-  const N = NOTE_HEADS[noteKey];
-  document.getElementById('note-title').textContent = N.title;
-  document.getElementById('note-desc').textContent = N.desc;
-  document.getElementById('note-foot').textContent = N.foot;
-  const tot = N.items.reduce((a,i)=>a+i[1],0);
-  hbars('ch-note', N.items.map(i=>({name:i[0], v:i[1], share:i[1]/tot*100})), 'of this head');
+  const M = NOTE_META[noteKey], D = NOTE_DATA[notePeriod][noteKey];
+  const itemSum = D.items.reduce((a,i)=>a+i[1],0);
+  const headTotal = D.total!=null ? D.total : itemSum;
+  document.getElementById('note-title').textContent =
+    `Note ${M.note} — ${M.name} · ${inr(headTotal)} (${NOTE_PERIODS[notePeriod]})`;
+  document.getElementById('note-desc').textContent =
+    D.total!=null ? 'Input build-up; the head total is net of stock movement.' : 'Line items as reported in the schedule.';
+  document.getElementById('note-foot').textContent = D.foot||'';
+  hbars('ch-note', D.items.map(i=>({name:i[0], v:i[1], share:i[1]/itemSum*100})), 'of the items shown');
 }
 (function segNote(){
+  const segP = document.getElementById('segNotePeriod');
+  segP.innerHTML = ['fy','apr','may'].map(k=>
+    `<button type="button" data-k="${k}" aria-pressed="${k===notePeriod}">${NOTE_PERIODS[k].replace(' 2026','')}</button>`).join('');
+  segP.addEventListener('click', e=>{
+    const b = e.target.closest('button'); if(!b) return;
+    notePeriod = b.dataset.k;
+    segP.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed', x===b));
+    ANIMATE = true;
+    renderNote();
+  });
   const segEl = document.getElementById('segNote');
-  segEl.innerHTML = Object.keys(NOTE_HEADS).map(k=>
-    `<button type="button" data-k="${k}" aria-pressed="${k===noteKey}">${NOTE_HEADS[k].label}</button>`).join('');
+  segEl.innerHTML = Object.keys(NOTE_META).map(k=>
+    `<button type="button" data-k="${k}" aria-pressed="${k===noteKey}">${NOTE_META[k].label}</button>`).join('');
   segEl.addEventListener('click', e=>{
     const b = e.target.closest('button'); if(!b) return;
     noteKey = b.dataset.k;
@@ -889,11 +970,11 @@ function fundingBars(mount){
 /* ---------- balance sheet tiles + summary table ---------- */
 (function bsTiles(){
   const tiles = [
-    {label:'Balance sheet size',        n:2.31, dp:2, pre:'₹', suf:' Cr', d:'', cls:'', vs:'assets = liabilities, 31 Mar 2026'},
-    {label:'Working capital',           n:1.57, dp:2, pre:'₹', suf:' Cr', d:'21.4×', cls:'up', vs:'current ratio'},
-    {label:'Cash & bank',               n:1.89, dp:2, pre:'₹', suf:' L',  d:'▼ ≈1 day', cls:'down', vs:'of operating costs'},
-    {label:'Inventory on hand',         n:74,   dp:0, pre:'',  suf:' days', d:'₹80.8 L', cls:'down', vs:'of stock at COGS rate'},
-    {label:'Cash conversion cycle',     n:94,   dp:0, pre:'',  suf:' days', d:'▼ long', cls:'down', vs:'stock 74d + debtors 22d − creditors ~1d'}
+    {label:'Balance sheet size — 31 May', n:2.57, dp:2, pre:'₹', suf:' Cr', d:'▲ +11%', cls:'up', vs:'vs ₹2.31 Cr on 31 Mar'},
+    {label:'Cash & bank — 31 May',        n:4.17, dp:2, pre:'₹', suf:' L',  d:'▲ 2.2×', cls:'up', vs:'vs 31 Mar — still ~3 days of costs'},
+    {label:'Trade receivables — 31 May',  n:77.0, dp:1, pre:'₹', suf:' L',  d:'▼ +139%', cls:'down', vs:'vs ₹32.2 L on 31 Mar'},
+    {label:'Inventory on hand — May',     n:26,   dp:0, pre:'',  suf:' days', d:'▲ −48 days', cls:'up', vs:'was 74 days at year-end'},
+    {label:'Borrowings — 31 May',         n:86.4, dp:1, pre:'₹', suf:' L',  d:'▼ +₹10.4 L', cls:'down', vs:'incl. new ₹19.5 L loan in May'}
   ];
   document.getElementById('bs-kpis').innerHTML = tiles.map(t =>
     `<div class="card tile"><div class="k-label">${t.label}</div>`+
@@ -903,27 +984,27 @@ function fundingBars(mount){
 (function bsTable(){
   const rows = [
     ['EQUITY & LIABILITIES', null, '', 'hdr'],
-    ["Owners' fund — capital account", 15888268.00, '1'],
-    ['Reserves & surplus', -1119755.84, '2'],
-    ['Loans & advances (borrowings)', 7597552.58, '3'],
-    ['Trade payables', 167052.08, '4'],
-    ['Other current liabilities', 603225.00, '5'],
-    ['Total', 23136341.82, '', 'total'],
+    ["Owners' fund — capital account", 'ownersFund', '1'],
+    ['Reserves & surplus', 'reserves', '2'],
+    ['Loans & advances (borrowings)', 'borrowings', '3'],
+    ['Trade payables', 'tradePay', '4'],
+    ['Other current liabilities', 'otherPay', '5'],
+    ['Total', 'total', '', 'total'],
     ['ASSETS', null, '', 'hdr'],
-    ['Fixed assets (furniture, vehicles & others)', 5928482.84, '6'],
-    ['Deposits', 724106.33, '7'],
-    ['Inventories', 8083090.13, '8'],
-    ['Trade receivables', 3215224.38, '9'],
-    ['Cash & bank balances', 188702.55, '10'],
-    ['Other current assets', 4996735.59, '11'],
-    ['Total', 23136341.82, '', 'total']
+    ['Fixed assets (furniture, vehicles & others)', 'fixed', '6'],
+    ['Deposits', 'deposits', '7'],
+    ['Inventories', 'inventory', '8'],
+    ['Trade receivables', 'receivables', '9'],
+    ['Cash & bank balances', 'cash', '10'],
+    ['Other current assets', 'otherCA', '11'],
+    ['Total', 'total', '', 'total']
   ];
-  let h = '<thead><tr><th>Particulars (₹)</th><th>Note</th><th>Amount</th></tr></thead><tbody>';
+  let h = '<thead><tr><th>Particulars (₹)</th><th>Note</th><th>31 Mar 2026</th><th>30 Apr 2026</th><th>31 May 2026</th></tr></thead><tbody>';
   rows.forEach(r=>{
-    const [name, v, note, cls] = r;
-    if (cls==='hdr'){ h += `<tr><td colspan="3" style="font-weight:700; letter-spacing:.04em; font-size:11.5px; color:var(--muted); text-transform:uppercase;">${name}</td></tr>`; return; }
-    const vCls = v<0 ? ' class="neg"' : '';
-    h += `<tr class="${cls||''}"><td>${name}</td><td class="dim">${note||'—'}</td><td${vCls}>${full(v)}</td></tr>`;
+    const [name, key, note, cls] = r;
+    if (cls==='hdr'){ h += `<tr><td colspan="5" style="font-weight:700; letter-spacing:.04em; font-size:11.5px; color:var(--muted); text-transform:uppercase;">${name}</td></tr>`; return; }
+    const cells = BSM[key].map(v=>`<td${v<0?' class="neg"':''}>${full(v)}</td>`).join('');
+    h += `<tr class="${cls||''}"><td>${name}</td><td class="dim">${note||'—'}</td>${cells}</tr>`;
   });
   h += '</tbody>';
   document.getElementById('bs-table').innerHTML = h;
@@ -993,9 +1074,25 @@ function renderCharts(anim){
   diverging('ch-mom');
   renderComposition();
   renderNote();
+  legend('lg-bsm',[{name:'31 Mar',color:'--s1'},{name:'30 Apr',color:'--s2'},{name:'31 May',color:'--s3'}]);
+  groupedColumns('ch-bsm',{
+    aria:'Month-end balance sheet movement',
+    height:280, yMin:0, yMax:9e6, yTicks:[0,3e6,6e6,9e6],
+    yFmt:v=>v===0?'0':(v/1e5)+'L', vFmt:v=>inr(v,1), tipFmt:v=>'₹'+full(v),
+    subLabels:false, capLabels:false,
+    series:[{name:'31 Mar',color:'--s1'},{name:'30 Apr',color:'--s2'},{name:'31 May',color:'--s3'}],
+    groups:[
+      {label:'Inventory',    values:[BSM.inventory[0],  BSM.inventory[1],  BSM.inventory[2]]},
+      {label:'Receivables',  values:[BSM.receivables[0],BSM.receivables[1],BSM.receivables[2]]},
+      {label:'Other CA',     values:[BSM.otherCA[0],    BSM.otherCA[1],    BSM.otherCA[2]]},
+      {label:'Cash',         values:[BSM.cash[0],       BSM.cash[1],       BSM.cash[2]]},
+      {label:'Borrowings',   values:[BSM.borrowings[0], BSM.borrowings[1], BSM.borrowings[2]]},
+      {label:'Fixed assets', values:[BSM.fixed[0],      BSM.fixed[1],      BSM.fixed[2]]}
+    ]
+  });
   donut('ch-assets','assets-legend', BS.assets, inr(BS.total), 'total assets');
   fundingBars('ch-funding');
-  hbars('ch-debtors', BS.debtors.map(d=>({name:d.name, v:d.v, share:d.v/BS.netReceivables*100})), 'of net receivables');
+  hbars('ch-debtors', BS.debtors.map(d=>({name:d.name, v:d.v, share:d.v/BS.netReceivables*100})), 'of net receivables (30 Apr)');
 }
 renderCharts(true);
 
